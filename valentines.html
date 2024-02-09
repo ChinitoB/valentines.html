@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+    body {
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .button-container {
+        text-align: center;
+    }
+    .button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .promotion-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        z-index: 999;
+    }
+    .image-container {
+        text-align: center;
+    }
+    .image-container img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+</style>
+</head>
+<body>
+    <div class="button-container">
+        <h1 class="title">Will you be my Valentine?</h1>
+        <button class="button" onclick="promote()">Yes</button>
+        <button class="button" onclick="promote()">Yes</button>
+    </div>
+
+    <div class="promotion-popup" id="promotionPopup">
+        <p>YOU HAVE BEEN PROMOTED TO ONE OF MY ELITE EMPLOYEES!!!</p>
+        <div class="image-container">
+            <img src="https://i.kym-cdn.com/entries/icons/facebook/000/048/316/elite_employees.jpg" alt="Large Image">
+        </div>
+    </div>
+
+    <script>
+        function promote() {
+            document.getElementById("promotionPopup").style.display = "block";
+        }
+    </script>
+</body>
+</html>
